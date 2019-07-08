@@ -6,28 +6,28 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "8.3.x",
-    "browser-sync": "2.23.x",
+    "browser-sync": "^2.26.7",
     "del": "^3.0.0",
-    "gulp": "3.9.x",
+    "gulp": "^4.0.2",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^4.0.0",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-less": "^4.0.1",
     "gulp-plumber": "1.2.x",
-    "gulp-postcss": "7.0.x",
+    "gulp-postcss": "^7.0.1",
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "4.0.x",
     "gulp-svgstore": "^6.1.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-webp": "^3.0.0",
+    "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
-    "stylelint": "9.2.x",
+    "stylelint": "^10.1.0",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "npm run build && gulp serve"
@@ -43,9 +43,12 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/sass/**/*.{sass,scss}"
+    "source/less/**/*.{less}"
   ],
   "engines": {
     "node": "8.11"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }
