@@ -49,6 +49,7 @@
     "node": "8.11"
   },
   "dependencies": {
-    "natives": "^1.1.6"
+    "natives": "^1.1.6",
+    "normalize.less": "^1.0.0"
   }
 }
