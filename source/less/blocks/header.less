@@ -1,29 +1,30 @@
 .header {
   background: linear-gradient(to bottom, @lime 63.75%, @white 36.25%);
   color: @white;
-}
 
-.header__heading {
-  .headingReset();
-  .fontOswald400();
-  .textCenter();
-  font-size: 36px;
-  line-height: 36px;
-  margin-top: 27px;
-  width: 100%;
-}
+  &__heading {
+    .headingReset();
+    .fontOswald400();
+    .textCenter();
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 27px;
+    width: 100%;
+  }
 
-.header__slogan {
-  .headingReset();
-  .fontOswald400();
-  .textCenter();
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  margin-top: 27px;
-  width: 100%;
-}
+  &__slogan {
+    .headingReset();
+    .fontOswald400();
+    .textCenter();
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-top: 27px;
+    width: 100%;
+  }
 
-.header__img {
-  margin-top: 27px;
+  &__img {
+    display: block;
+    margin: 27px auto 0 auto;
+  }
 }

@@ -1,13 +1,23 @@
 .btn {
   .fontOswald400();
   .textCenter();
+  .linkReset();
   background-color: @lime;
   color: @white;
+  cursor: pointer;
   font-size: 14px;
   line-height: 18px;
   min-height: 15px;
   padding: 12px 0 13px 0;
-  text-decoration: none;
   text-transform: uppercase;
   width: 100%;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

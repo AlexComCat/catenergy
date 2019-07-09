@@ -1,0 +1,49 @@
+.features {
+  .flexColumn();
+  margin-top: 2px;
+}
+
+.feature {
+  background-color: @lightBlue;
+  .listReset();
+  margin-top: 20px;
+
+  &__heading {
+    .fontOswald400();
+    .headingReset();
+    color: @lightBlack;
+    font-size: 24px;
+    line-height: 37px;
+    margin: 36px 10px 0 92px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    .fontArial();
+    color: @grey;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 34px 32px 0 21px;
+  }
+
+  &__link {
+    .fontOswald400();
+    .linkReset();
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: @lightBlack;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    height: 18px;
+    margin: 21px 20px 0 20px;
+    padding: 20px 0 19px 0;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 240px;
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
