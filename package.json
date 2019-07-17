@@ -5,10 +5,11 @@
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "8.3.x",
+    "autoprefixer": "^8.3.0",
     "browser-sync": "^2.26.7",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
+    "gulp-build": "^0.5.3",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^6.0.0",
@@ -23,13 +24,14 @@
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
     "stylelint": "^10.1.0",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "uglify-js": "^3.6.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
+    "build": "gulp --task",
     "start": "npm run build && gulp serve"
   },
   "browserslist": [
@@ -46,10 +48,11 @@
     "source/less/**/*.{less}"
   ],
   "engines": {
-    "node": "8.11"
+    "node": "10.16.0"
   },
   "dependencies": {
     "natives": "^1.1.6",
-    "normalize.less": "^1.0.0"
+    "normalize.less": "^1.0.0",
+    "websocket": "^1.0.29"
   }
 }

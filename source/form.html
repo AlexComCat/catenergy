@@ -4,16 +4,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
-    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!--Site header-->
     <header class="site-header">
         <section class="header-top">
-            <img src="http://placehold.it/33x38" alt="Логотип-картинка" width="33" height="38" class="logo-pic">
-            <img src="http://placehold.it/101x18" alt="Логотип-текст" width="101" height="18" class="logo-text">
-            <button class="nav__btn" aria-label="Открыть меню">Open</button>
+            <img src="http://placehold.it/102x59" alt="Логотип-картинка" width="102" height="59" class="logo">
+            <nav class="site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">главная</li>
+                    <li class="site-nav__item">каталог продукции</li>
+                    <li class="site-nav__item">подбор программы</li>
+                </ul>
+            </nav>
+        </section>
+        <section class="min-header-top">
+            <div class="min-header-top__wrap container">
+                <img src="http://placehold.it/33x38" alt="Логотип-картинка" width="33" height="38" class="logo-pic">
+                <img src="http://placehold.it/101x18" alt="Логотип-текст" width="101" height="18" class="logo-text">
+                <button class="min-nav__btn" aria-label="Открыть меню"></button>
+            </div>
+            <div class="min-nav__list min-nav__list--visible">
+                <a href="index.html" class="min-nav__link">
+                    <h2 class="min-nav__heading">главная</h2>
+                </a>
+                <a href="catalog.html" class="min-nav__link">
+                    <h2 class="min-nav__heading">каталог продукции</h2>
+                </a>
+                <a href="form.html" class="min-nav__link">
+                    <h2 class="min-nav__heading">подбор программы</h2>
+                </a>
+            </div>
         </section>
     </header>
 
@@ -94,26 +116,31 @@
     <!--Footer-->
     <footer class="site-footer">
         <!--Address-->
-        <section class="address">
+        <section class="address container">
             <h2 class="address__heading">приглашаем к сотрудничеству дилеров!</h2>
             <address class="address__caption">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </section>
         <!--Map link-->
         <a href="#" class="map-link" aria-label="Адрес на карте"></a>
-        <section class="footer-logo">
-            <img src="http://placehold.it/128x24" alt="Логотип-картинка" width="128" height="24" class="footer-logo--img">
-        </section>
-        <section class="social">
-            <h2 class="visually-hidden">Ссылки в социальных сетях</h2>
-            <a href="https://vk.com" class="social__link social__link-vk" aria-label="Вконтакте"></a>
-            <a href="https://instagram.com" class="social__link social__link-ig" aria-label="Инстаграм"></a>
-            <a href="https://facebook.com" class="social__link social__link-fb" aria-label="Фейсбук"></a>
-        </section>
-        <!--Developer link-->
-        <a href="https://htmlacademy.ru/" class="developer">
-            <span class="developer__text">HTML Academy</span>
-            <img src="http://placehold.it/27x34" alt="Логотип академии" width="27" height="34">
-        </a>
+
+        <div class="footer-bottom">
+            <!--Footer logo-->
+            <section class="footer-logo container">
+                <img src="http://placehold.it/128x24" alt="Логотип-картинка" width="128" height="24" class="footer-logo__img">
+            </section>
+            <!--Social links-->
+            <section class="social container">
+                <h2 class="visually-hidden">Ссылки в социальных сетях</h2>
+                <a href="https://vk.com" class="social__link social__link-vk" aria-label="Вконтакте"></a>
+                <a href="https://instagram.com" class="social__link social__link-ig" aria-label="Инстаграм"></a>
+                <a href="https://facebook.com" class="social__link social__link-fb" aria-label="Фейсбук"></a>
+            </section>
+            <!--Developer link-->
+            <a href="https://htmlacademy.ru/" class="developer container" aria-label="Сайт HTML Academy">
+                <span class="developer__text">HTML Academy</span>
+                <img src="http://placehold.it/27x34" class="developer__logo" alt="Логотип академии" width="27" height="34">
+            </a>
+        </div>
     </footer>
 </body>
 </html>

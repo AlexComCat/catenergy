@@ -1,3 +1,5 @@
+"use strict";
+
 var less = require('gulp-less');
 var gulp = require('gulp');
 var plumber = require("gulp-plumber");
