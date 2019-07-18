@@ -35,6 +35,10 @@
     width: 100%;
   }
 
+  &__column {
+    padding: 0;
+  }
+
   &__column:first-child {
     text-align: left;
   }
@@ -45,5 +49,40 @@
 
   &__order {
     margin-bottom: 24px;
+  }
+
+  &__add-icon {
+    background-color: #cccccc;
+    margin: 26px auto;
+    height: 30px;
+    width: 30px;
+  }
+
+  &__add-heading {
+    .fontOswald400();
+    .headingReset();
+    color: @lightBlack;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__add-text {
+    .fontArial();
+    .paragraphReset();
+    color: @grey;
+    font-size: 12px;
+    margin-top: 9px;
+    line-height: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__add-show {
+    background-color: #f2f2f2;
+    color: @grey;
+    margin: 20px 0 24px 0;
   }
 }
