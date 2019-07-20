@@ -41,24 +41,30 @@
 
     <!--Site content-->
     <main class="site-content">
-        <h1 class="site-content__heading">Подбор программы</h1>
+        <h1 class="feedback__heading container">Подбор программы</h1>
         <form action="https://echo.htmlacademy.ru" method="post" class="feedback__form">
-            <h2 class="feedback__mission">Заполните анкету и мы подберем программу питания для вашего кота</h2>
-            <!--Info contact-->
-            <fieldset class="feedback__item">
+            <h2 class="feedback__mission container">Заполните анкету и мы подберем программу питания для вашего кота</h2>
+            <!--Cat info-->
+            <fieldset class="feedback__personal feedback__cat-info">
                 <!--Name-->
-                <label for="feedback__name">имя:*</label>
-                <input type="name" class="feedback__name" id="feedback__name" placeholder="барсик" name="name" required>
+                <label class="feedback__personal-item">
+                    <span class="feedback__personal-name">имя:*</span>
+                    <input type="name" class="feedback__personal-input" placeholder="барсик" name="name" required>
+                </label>
                 <!--Weight-->
-                <label for="feedback__weight">вес (кг):*</label>
-                <input type="number" class="feedback__weight" id="feedback__weight" placeholder="7" name="weight" required>
+                <label class="feedback__personal-item">
+                    <span class="feedback__personal-name">вес (кг):*</span>
+                    <input type="number" class="feedback__personal-input" placeholder="7" name="weight" required>
+                </label>
                 <!--Age-->
-                <label for="feedback__age">возраст (лет):*</label>
-                <input type="number" class="feedback__age" id="feedback__age" placeholder="7" name="age">
+                <label class="feedback__personal-item">
+                    <span class="feedback__personal-name">возраст (лет):*</span>
+                    <input type="number" class="feedback__personal-input" placeholder="7" name="age" required>
+                </label>
             </fieldset>
             <!--Problem-->
             <fieldset class="feedback__item">
-                <div class="feedback__problem">
+                <div class="feedback__problem-wrap">
                     <input type="radio" id="feedback__problem-1" class="feedback__problem" name="feedback__problem" value="похудение">
                     <span class="feedback__new-problem"></span>
                     <label for="feedback__problem-1" class="feedback__problem-name">похудение</label>
@@ -75,18 +81,27 @@
                 </div>
             </fieldset>
             <!--Contacts-->
-            <fieldset class="feedback__item">
-                <legend class="feedback__heading">контактные данные (владельца кота)</legend>
+            <fieldset class="feedback__personal feedback__owner-info">
+                <legend class="feedback__legend">Контактные данные (владельца кота)</legend>
                 <!--Email-->
-                <label for="feedback__email">email:*</label>
-                <input type="email" class="feedback__email" id="feedback__email" placeholder="kuklachev@gmail.com" name="email" required>
+                <label class="feedback__personal-item">
+                    <span class="feedback__personal-name">email:*</span>
+                    <input type="email" class="feedback__personal-input feedback__personal-email" placeholder="kuklachev@gmail.com" name="email" required>
+                </label>
                 <!--Phone-->
-                <label for="feedback__phone">телефон:*</label>
-                <input type="number" class="feedback__phone" id="feedback__phone" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="15" placeholder="8 (960) 900-60-90" name="phone" required>
+                <label class="feedback__personal-item">
+                    <span class="feedback__personal-name">телефон:*</span>
+                    <input type="number" class="feedback__personal-input feedback__personal-phone" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="15" placeholder="8 (960) 900-60-90" name="phone" required>
+                </label>
+            </fieldset>
+            <!--Comments-->
+            <fieldset class="feedback__comments container">
+                <legend class="feedback__legend">Коментарии</legend>
+                <textarea name="comments" class="feedback__comments-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
             <!--Text-->
             <fieldset class="feedback__item">
-                <legend class="feedback__heading">дополнительно</legend>
+                <legend class="feedback__legend">Дополнительно</legend>
                 <div class="feedback__product">
                     <input type="checkbox" id="feedback__product-1" class="feedback__product" name="feedback__product" value="сахарозаменитель">
                     <span class="feedback__new-product"></span>
@@ -108,7 +123,7 @@
                     <label for="feedback__product-4" class="feedback__product-name">витамины</label>
                 </div>
             </fieldset>
-            <button type="submit" class="feedback__send">отправить заявку</button>
+            <button type="submit" class="feedback__send btn">отправить заявку</button>
             <p class="feedback__note">* — Обязательные поля</p>
         </form>
     </main>

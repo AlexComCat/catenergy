@@ -1,0 +1,110 @@
+.feedback {
+  &__heading {
+    .fontOswald400();
+    .headingReset();
+    color: @lightBlack;
+    padding: 0 20px;
+    font-size: 36px;
+    line-height: 60px;
+    margin-top: 26px;
+  }
+
+  &__mission {
+    .fontOswald400();
+    .headingReset();
+    display: inline-block;
+    color: @lightBlack;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 33px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 230px;
+  }
+
+  &__legend {
+    .fontOswald400();
+    .headingReset();
+    padding: 29px 0 32px 0;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  //Info
+  &__personal {
+    border: none;
+    margin: 0;
+
+    &-item {
+      .fontOswald400();
+      .flexRow();
+      align-items: center;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 14px;
+    }
+
+    &-item:last-child {
+      margin-bottom: 0;
+    }
+
+    &-name {
+      color: @darkGrey;
+      flex-shrink: 0;
+      margin-right: 15px;
+      max-width: 125px;
+      text-transform: uppercase;
+    }
+
+    &-input {
+      border: 1px solid @lightGrey;
+      color: @grey;
+      flex-grow: 1;
+      padding-left: 16px;
+      height: 43px;
+    }
+
+    &-input::placeholder {
+      color: @grey;
+      text-transform: uppercase;
+    }
+  }
+  //Cat info
+  &__cat-info {
+    padding: 37px 20px 23px 20px;
+  }
+  //Owner info
+  &__owner-info {
+    padding: 0 20px;
+  }
+  //Comments
+  &__comments {
+    border: none;
+
+    &-text {
+      border: 1px solid @lightGrey;
+      height: 122px;
+      padding: 14px;
+      resize: none;
+      width: 252px;
+    }
+
+    &-text::placeholder {
+      .fontOswald400();
+      color: @grey;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }
+  //Note
+  &__note {
+    .paragraphReset();
+    .fontArial();
+    color: @grey;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 22px 20px 30px 20px;
+    text-align: center;
+  }
+}
