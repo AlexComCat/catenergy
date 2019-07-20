@@ -51,6 +51,8 @@
     "node": "10.16.0"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
+    "lodash.merge": "^4.6.2",
     "natives": "^1.1.6",
     "normalize.less": "^1.0.0",
     "websocket": "^1.0.29"
