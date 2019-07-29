@@ -10,32 +10,42 @@
     <!--Site header-->
     <header class="site-header">
         <section class="header-top">
-            <img src="http://placehold.it/102x59" alt="Логотип-картинка" width="102" height="59" class="logo">
-            <nav class="site-nav">
-                <ul class="site-nav__list">
-                    <li class="site-nav__item">главная</li>
-                    <li class="site-nav__item">каталог продукции</li>
-                    <li class="site-nav__item">подбор программы</li>
+            <a href="index.html" class="site-logo">
+                <img src="http://placehold.it/102x59" alt="Логотип-картинка" width="102" height="59" class="site-logo__pic">
+            </a>
+            <div class="site-logo-mobile">
+                <div class="site-logo-mobile__wrap container">
+                    <img src="http://placehold.it/33x38" alt="Логотип-картинка" class="site-logo-mobile__pic" width="33" height="38">
+                    <img src="http://placehold.it/101x18" alt="Логотип-текст" class="site-logo-mobile__text" width="101" height="18">
+                    <button class="nav-mobile__btn" aria-label="Открыть меню"></button>
+                </div>
+            </div>
+            <!--Desktop and tablet versions-->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html" class="nav__link nav__link--selected">каталог продукции</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="form.html" class="nav__link">подбор программы</a>
+                    </li>
                 </ul>
             </nav>
-        </section>
-        <section class="min-header-top">
-            <div class="min-header-top__wrap container">
-                <img src="http://placehold.it/33x38" alt="Логотип-картинка" width="33" height="38" class="logo-pic">
-                <img src="http://placehold.it/101x18" alt="Логотип-текст" width="101" height="18" class="logo-text">
-                <button class="min-nav__btn" aria-label="Открыть меню"></button>
-            </div>
-            <div class="min-nav__list min-nav__list--visible">
-                <a href="index.html" class="min-nav__link">
-                    <h2 class="min-nav__heading">главная</h2>
+            <!--Mobile version-->
+            <nav class="nav-mobile nav-mobile--visible">
+                <a href="index.html" class="nav-mobile__link">
+                    <h2 class="nav-mobile__heading">главная</h2>
                 </a>
-                <a href="catalog.html" class="min-nav__link">
-                    <h2 class="min-nav__heading">каталог продукции</h2>
+                <a href="catalog.html" class="nav-mobile__link">
+                    <h2 class="nav-mobile__heading">каталог продукции</h2>
                 </a>
-                <a href="form.html" class="min-nav__link">
-                    <h2 class="min-nav__heading">подбор программы</h2>
+                <a href="form.html" class="nav-mobile__link">
+                    <h2 class="nav-mobile__heading">подбор программы</h2>
                 </a>
-            </div>
+            </nav>
         </section>
     </header>
 

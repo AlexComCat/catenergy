@@ -1,8 +1,16 @@
+//Mobile version
 .header-top {
-  display: none;
-}
-
-.header-top--visible {
   .flexRow();
   justify-content: space-between;
+}
+
+//Tablet version
+@media (min-width: 768px) {
+  .header-top {
+    align-items: center;
+    margin: 18px auto 0 auto;
+    min-height: 70px;
+    padding: 0 30px;
+    width: 708px;
+  }
 }
