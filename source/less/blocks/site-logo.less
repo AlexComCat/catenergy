@@ -13,6 +13,7 @@
   &--visible {
     display: block;
   }
+
   &-mobile {
     border-bottom: 1px solid #e6e6e6;
     width: 100%;
@@ -27,12 +28,33 @@
   }
 }
 //Tablet version
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .site-logo {
     display: block;
 
+    &__img-tablet {
+      display: block;
+    }
+
+    &__img-desktop {
+      display: none;
+    }
+
     &-mobile {
       display: none;
+    }
+  }
+}
+
+//Desktop version
+@media all and (min-width: 1300px) {
+  .site-logo {
+    &__img-tablet {
+      display: none;
+    }
+
+    &__img-desktop {
+      display: block;
     }
   }
 }

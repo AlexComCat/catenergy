@@ -1,12 +1,12 @@
 .features {
   .flexColumn();
-  margin-top: 2px;
 }
 
 .feature {
   background-color: @lightBlue;
+  border-bottom: 1px solid transparent;
   .listReset();
-  margin-top: 20px;
+  margin-bottom: 20px;
 
   &__heading {
     .fontOswald400();
@@ -15,7 +15,43 @@
     font-size: 24px;
     line-height: 37px;
     margin: 36px 10px 0 92px;
+    position: relative;
     text-transform: uppercase;
+
+    &::before {
+      background-color: @green;
+      border-radius: 50%;
+      content: "";
+      height: 50px;
+      left: -70px;
+      position: absolute;
+      top: -5px;
+      width: 50px;
+    }
+  }
+
+  &__heading-1 {
+    &::after {
+      background-color: #000000;
+      content: "";
+      height: 49px;
+      left: -62px;
+      position: absolute;
+      top: -8px;
+      width: 35px;
+    }
+  }
+
+  &__heading-2 {
+    &::after {
+      background-color: #000000;
+      content: "";
+      height: 28px;
+      left: -78px;
+      position: absolute;
+      top: 5px;
+      width: 67px;
+    }
   }
 
   &__text {
@@ -24,26 +60,185 @@
     font-size: 14px;
     line-height: 18px;
     margin: 34px 32px 0 21px;
+    padding-bottom: 21px;
+    position: relative;
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.1);
+      content: "";
+      height: 1px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 240px;
+    }
+  }
+
+  &__text-1 {
+    width: 225px;
+  }
+
+  &__text-2 {
+    width: 205px;
   }
 
   &__link {
     .fontOswald400();
     .linkReset();
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     color: @lightBlack;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
     line-height: 16px;
     height: 18px;
-    margin: 21px 20px 0 20px;
-    padding: 20px 0 19px 0;
+    margin: 20px;
+    position: relative;
     text-transform: uppercase;
     vertical-align: middle;
-    width: 240px;
 
     &:active {
       color: rgba(0, 0, 0, 0.3);
+    }
+
+    &::after {
+      background-color: #3e4242;
+      content: "";
+      height: 11px;
+      left: 95px;
+      position: absolute;
+      top: 3px;
+      width: 24px;
+    }
+  }
+}
+
+//Tablet version
+@media (min-width: 768px) {
+  .feature {
+    margin-bottom: 30px;
+
+    &__heading {
+      font-size: 36px;
+      margin: 76px 10px 0 54px;
+
+      &::before {
+        height: 200px;
+        left: 394px;
+        top: 16px;
+        width: 200px;
+      }
+    }
+
+    &__heading-1 {
+      &::after {
+        height: 194px;
+        left: 424px;
+        top: 5px;
+        width: 140px;
+      }
+    }
+
+    &__heading-2 {
+      &::after {
+        height: 112px;
+        left: 360px;
+        top: 50px;
+        width: 268px;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 25px 0 0 54px;
+
+      &::after {
+        background: none;
+      }
+    }
+
+    &__text-1 {
+      width: 375px;
+    }
+
+    &__text-2 {
+      width: 344px;
+    }
+
+    &__link {
+      border: none;
+      font-size: 20px;
+      line-height: 20px;
+      position: relative;
+      margin: 59px 0 57px 54px;
+
+      &::after {
+        left: 130px;
+        top: 5px;
+      }
+    }
+  }
+}
+
+//Desktop version
+@media (min-width: 1300px) {
+  .features {
+    .flexRow();
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+
+  .feature {
+    width: 570px;
+
+    &__heading {
+      margin: 78px 10px 0 215px;
+
+      &::before {
+        height: 100px;
+        left: -164px;
+        top: -28px;
+        width: 100px;
+      }
+    }
+
+    &__heading-1 {
+      &::after {
+        height: 97px;
+        left: -150px;
+        top: -35px;
+        width: 70px;
+      }
+    }
+
+    &__heading-2 {
+      &::after {
+        height: 56px;
+        left: -182px;
+        top: -10px;
+        width: 134px;
+      }
+    }
+
+    &__text {
+      margin: 74px 0 0 52px;
+    }
+
+    &__text-1 {
+      width: 466px;
+    }
+
+    &__text-2 {
+      width: 466px;
+    }
+
+    &__link {
+      margin: 35px 0 59px 52px;
+
+      &::after {
+        left: 126px;
+        top: 4px;
+      }
     }
   }
 }
