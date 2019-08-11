@@ -8,13 +8,38 @@
   &__link {
     display: inline-block;
     background: green;
-    height: 22px;
     margin-right: 37px;
     vertical-align: middle;
+
+    height: 22px;
     width: 22px;
 
     &:last-child {
       margin-right: 0;
     }
   }
+}
+
+//Tablet version
+@media (min-width: 768px) {
+  .social {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+    &__link {
+      height: 28px;
+      width: 30px;
+      margin-right: 29px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+//Desktop version
+@media (min-width: 1300px) {
+
 }

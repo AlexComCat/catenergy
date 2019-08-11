@@ -1,6 +1,12 @@
 .address {
-  .flexRow();
-  margin-top: 30px;
+  background: @white;
+
+  &__wrap {
+    .flexRow();
+    background: @white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 
   &__heading {
     .fontOswald400();
@@ -15,13 +21,71 @@
   }
 
   &__caption {
+    .flexColumn();
     .paragraphReset();
     .fontArial();
     color: @grey;
     display: inline-block;
     font-size: 14px;
+    justify-content: space-between;
     line-height: 20px;
     width: 50%;
     vertical-align: top;
+  }
+}
+
+//Tablet version
+@media (min-width: 768px) {
+  .address {
+    background: @white;
+
+    &__wrap {
+      justify-content: space-between;
+      padding-top: 67px;
+      padding-bottom: 62px;
+    }
+
+    &__heading {
+      font-size: 20px;
+      line-height: 24px;
+      margin-left: 40px;
+      width: 160px;
+    }
+
+    &__caption {
+      .flexColumn();
+      font-size: 16px;
+      justify-content: space-between;
+      margin-right: 40px;
+      text-align: right;
+      width: 160px;
+    }
+  }
+}
+
+//Desktop version
+@media (min-width: 1300px) {
+  .address {
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 1220px;
+
+    &__wrap {
+      background: @white;
+      margin: 0;
+      padding: 68px 85px 60px 75px;
+      position: absolute;
+      top: 95px;
+      width: 410px;
+    }
+
+    &__heading {
+      margin: 0;
+    }
+
+    &__caption {
+      margin: 0;
+      text-align: left;
+    }
   }
 }
