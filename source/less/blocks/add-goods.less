@@ -1,36 +1,57 @@
 .add-goods {
+  border-top: 3px solid @green;
+  margin-top: 42px;
+
+  &__heading-wrap {
+    margin-top: -18px;
+  }
+
   &__heading {
     .fontOswald400();
-    .headingReset();
-    border-bottom: 1px solid #e6e6e6;
+    background-color: @white;
+    display: inline-block;
     color: @lightBlack;
     font-size: 24px;
     line-height: 24px;
-    padding: 28px 0 32px 0;
+    margin: 0 0 0 -20px;
+    padding: 0 18px;
+    vertical-align: middle;
+    width: auto;
+  }
+
+  &__list-wrap {
+    margin-bottom: 35px;
   }
 
   &__list {
-    .unListReset();
+    .listReset();
+    margin-top: 30px;
   }
 
   &__item {
     .listReset();
-    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 14px;
+    padding-bottom: 16px;
+
+    &:last-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
   }
 
   &__item-heading {
     .fontOswald400();
     .headingReset();
+    display: inline-block;
     color: @darkGrey;
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
-    margin-top: 15px;
+    vertical-align: middle;
   }
 
   &__spec {
     border-collapse: collapse;
-    margin-top: 10px;
     width: 100%;
   }
 
@@ -39,33 +60,35 @@
     color: @grey;
     font-size: 14px;
     line-height: 14px;
-    padding: 0;
+    padding: 10px 0 12px 0;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
   }
 
-  &__column:first-child {
-    text-align: left;
-  }
-
-  &__column:last-child {
-    text-align: right;
-  }
-
-  &__order {
-    margin: 13px 0 17px 0;
+  &__btn {
+    width: 100%;
+    padding: 10px 0;
   }
 
   &__promo {
     background: #71b548;
     border-bottom: 1px solid transparent;
     border-top: 1px solid transparent;
-    margin: 40px 0 35px 0;
+    margin: 40px 0 0 0;
+    padding: 65px 0 42px 0;
     text-align: center;
   }
 
   &__promo-icon {
     background: #ffffff;
     height: 60px;
-    margin: 65px auto 0 auto;
+    margin: 0 auto;
     width: 55px;
   }
 
@@ -76,8 +99,143 @@
     color: @white;
     font-size: 16px;
     line-height: 20px;
-    margin: 62px auto 42px auto;
+    margin: 62px auto 0 auto;
     vertical-align: top;
     width: 165px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .add-goods {
+    margin-top: 87px;
+
+    &__heading-wrap {
+      margin-top: -24px;
+    }
+
+    &__heading {
+      font-size: 36px;
+      line-height: 36px;
+      padding: 0 30px 0 40px;
+      margin-left: -40px;
+    }
+
+    &__list-wrap {
+      margin-bottom: 76px;
+    }
+
+    &__list {
+      margin-top: 75px;
+    }
+
+    &__item {
+      .flexRow();
+      align-items: center;
+      justify-content: space-between;
+      padding: 26px 38px 24px 38px;
+    }
+
+    &__item-heading {
+      font-size: 20px;
+      line-height: 20px;
+      width: auto;
+    }
+
+    &__spec {
+      width: 208px;
+    }
+
+    &__column {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        padding-left: 10px;
+      }
+    }
+
+    &__btn {
+      margin-top: 24px;
+    }
+
+    &__promo {
+      .flexRow();
+      margin: 68px 0 0 0;
+      padding: 64px 0 74px 0;
+    }
+
+    &__promo-icon {
+      margin-left: 90px;
+    }
+
+    &__promo-text {
+      margin: 0 120px 0 0;
+      text-align: left;
+    }
+  }
+}
+
+//Desktop version
+@media all and (min-width: 1300px) {
+  .add-goods {
+    .flexRow();
+    margin-top: 96px;
+
+    &__heading-wrap {
+      margin-top: -24px;
+    }
+
+    &__heading {
+      padding: 0 40px 0 38px;
+      margin-left: -38px;
+    }
+
+    &__list-wrap {
+      .flexRow();
+      margin-bottom: 85px;
+    }
+
+    &__list {
+      margin-top: 75px;
+    }
+
+    &__item {
+      padding: 15px 0 16px 0;
+      width: 895px;
+    }
+
+    &__item-heading {
+      width: 245px;
+    }
+
+    &__spec {
+      width: 265px;
+    }
+
+    &__btn {
+      margin-top: 0;
+      width: 225px;
+    }
+
+    &__promo {
+      display: block;
+      margin: 75px 0 0 80px;
+      padding: 64px 0 35px 0;
+      width: 245px;
+    }
+
+    &__promo-icon {
+      margin: 0 auto;
+    }
+
+    &__promo-text {
+      margin: 60px auto 0 auto;
+      text-align: center;
+    }
   }
 }
