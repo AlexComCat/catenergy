@@ -1,7 +1,6 @@
 .feedback {
   &__heading {
     .fontOswald400();
-    .headingReset();
     color: @lightBlack;
     padding: 0 20px;
     font-size: 36px;
@@ -11,38 +10,26 @@
 
   &__mission {
     .fontOswald400();
-    .headingReset();
-    display: inline-block;
     color: @lightBlack;
     font-size: 14px;
     line-height: 18px;
-    margin-top: 33px;
-    padding: 0 20px;
+    margin: 33px auto 0 auto;
+    padding: 0 50px 0 20px;
     text-transform: uppercase;
     vertical-align: middle;
-    width: 230px;
+    width: 250px;
   }
 
-  &__legend {
-    .fontOswald400();
-    .headingReset();
-    background-color: #ffffff;
-    display: inline-block;
-    font-size: 24px;
-    left: 0;
-    line-height: 24px;
-    margin: 0;
-    padding: 0 20px;
-    position: absolute;
-    top: -17px;
-    vertical-align: middle;
-    width: 224px;
-  }
-  //Info
-  &__info {
+  //Cat and aim
+  &__сat-aim {
     border: none;
     margin: 0;
-    position: relative;
+    padding: 0;
+  }
+  //Cat info
+  &__cat {
+    padding-top: 37px;
+    padding-bottom: 23px;
 
     &-item {
       .fontOswald400();
@@ -51,7 +38,6 @@
       font-size: 16px;
       line-height: 18px;
       margin-bottom: 14px;
-      padding: 0 20px;
     }
 
     &-item:last-child {
@@ -79,20 +65,11 @@
       text-transform: uppercase;
     }
   }
-  //Cat info
-  &__info-cat-wrap {
-    border: none;
-    padding: 0;
-  }
-
-  &__info-cat {
-    padding: 37px 0 23px 0;
-  }
-  //Target
-  &__target {
+  //aim
+  &__aim {
     border-bottom: 1px solid @darkWhite;
     border-top: 1px solid @darkWhite;
-    padding: 14px 20px;
+    padding: 14px 0;
 
     &-item {
       position: relative;
@@ -110,7 +87,7 @@
       cursor: pointer;
       display: block;
       height: 30px;
-      left: 0;
+      left: 20px;
       position: absolute;
       top: 5px;
       width: 30px;
@@ -137,19 +114,85 @@
   }
 
   //Owner info
-  &__info-owner {
+  &__owner {
+    border: none;
     border-top: 3px solid #68b738;
     margin-top: 42px;
-    padding: 62px 0 0 0;
-    position: relative;
+    padding: 0;
+
+    &-heading-wrap {
+      margin: -17px auto 0 auto;
+    }
+
+    &-heading {
+      .fontOswald400();
+      .headingReset();
+      background-color: #ffffff;
+      display: inline-block;
+      font-size: 24px;
+      left: 0;
+      line-height: 24px;
+      margin: 0 0 32px -20px;
+      padding: 0 20px;
+      vertical-align: middle;
+      width: 182px;
+    }
+
+    &-item {
+      .fontOswald400();
+      .flexRow();
+      align-items: center;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 14px;
+    }
+
+    &-item:last-child {
+      margin-bottom: 0;
+    }
+
+    &-name {
+      color: @darkGrey;
+      flex-shrink: 0;
+      margin-right: 15px;
+      max-width: 125px;
+      text-transform: uppercase;
+    }
+
+    &-input {
+      border: 1px solid @lightGrey;
+      color: @grey;
+      flex-grow: 1;
+      padding-left: 16px;
+      height: 43px;
+    }
+
+    &-input::placeholder {
+      color: @grey;
+      text-transform: uppercase;
+    }
   }
+
   //Comments
   &__comments {
     border: none;
     border-top: 3px solid #68b738;
-    padding: 42px 20px 0 20px;
-    position: relative;
+    padding: 0;
     margin: 42px 0 0 0;
+
+    &-heading {
+      .fontOswald400();
+      .headingReset();
+      background-color: #ffffff;
+      display: inline-block;
+      font-size: 24px;
+      left: 0;
+      line-height: 24px;
+      margin: -17px 0 32px -20px;
+      padding: 0 20px;
+      vertical-align: middle;
+      width: 110px;
+    }
 
     &-text {
       border: 1px solid @lightGrey;
@@ -173,8 +216,25 @@
     border: none;
     border-top: 3px solid #68b738;
     margin: 42px 0 0 0;
-    padding: 37px 20px 0 20px;
-    position: relative;
+    padding: 0;
+
+    &-heading-wrap {
+      margin-top: -17px;
+    }
+
+    &-heading {
+      .fontOswald400();
+      .headingReset();
+      background-color: #ffffff;
+      display: inline-block;
+      font-size: 24px;
+      left: 0;
+      line-height: 24px;
+      margin: 0 0 26px -20px;
+      padding: 0 20px;
+      vertical-align: middle;
+      width: 140px;
+    }
 
     &-item {
       position: relative;
@@ -229,7 +289,353 @@
   }
   //Sent button
   &__send {
-    margin: 26px 20px 0 20px;
-    width: 280px;
+    border: none;
+    margin-top: 26px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+
+//Tablet version
+@media (min-width: 768px) {
+  .feedback {
+    &__heading {
+      font-size: 60px;
+      margin-top: 58px;
+    }
+
+    &__mission {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 55px;
+      padding: 0 315px 0 71px;
+      width: 383px;
+    }
+
+    //Cat and aim
+    &__сat-aim {
+      border: none;
+      margin: 68px auto 0 auto;
+      padding: 0 67px 0 71px;
+      width: 630px;
+    }
+
+    &__cat {
+      margin: 0;
+      padding: 0;
+      width: 630px;
+
+      &-item {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
+
+      &-name {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      &-iput {
+        height: 52px;
+      }
+    }
+
+    //aim
+    &__aim {
+      border: 1px solid @darkWhite;
+      margin-top: 72px;
+      width: 630px;
+
+      &-item {
+        margin: 0;
+        padding: 0;
+        width: 632px;
+      }
+
+      &-new {
+        height: 40px;
+        top: 10px;
+        left: 27px;
+        width: 40px;
+      }
+
+      &-name {
+        font-size: 20px;
+        padding: 15px 10px 15px 87px;
+        line-height: 30px;
+      }
+    }
+
+    //owner
+    &__owner {
+      margin-top: 96px;
+      width: auto;
+
+      &-heading-wrap {
+        margin: -25px auto 72px auto;
+        width: 570px;
+      }
+
+      &-heading {
+        font-size: 36px;
+        line-height: 36px;
+        margin-left: -47px;
+        width: 512px;
+      }
+
+      &-wrap {
+        margin: 0 auto;
+        padding: 0 67px 0 71px;
+        width: 630px;
+      }
+
+      &-item {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
+
+      &-name {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      &-iput {
+        height: 52px;
+      }
+    }
+
+    //Comments
+    &__comments {
+      padding: 0;
+      margin-top: 87px;
+
+      &-wrap {
+        margin: 0 auto;
+        padding: 0 67px 0 71px;
+        width: 630px;
+      }
+
+      &-heading {
+        display: block;
+        font-size: 36px;
+        line-height: 36px;
+        margin: -22px 0 72px -20px;
+        padding: 0 20px;
+        width: 162px;
+      }
+
+      &-text {
+        height: 144px;
+        padding: 15px 18px 15px 18px;
+        margin: 0;
+        resize: none;
+        width: 592px;
+      }
+
+      &-text::placeholder {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    //Additionally
+    &__add {
+      margin-top: 87px;
+      margin-bottom: 72px;
+
+      &-heading-wrap {
+        margin: -24px 0 38px 0;
+        padding: 0 67px 0 71px;
+        width: 570px;
+      }
+
+      &-heading {
+        display: block;
+        font-size: 36px;
+        line-height: 36px;
+        margin: 0 0 0 -20px;
+        padding: 0 20px;
+        width: 210px;
+      }
+
+      &-wrap {
+        .flexRow();
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 67px 0 71px;
+        width: 630px;
+      }
+
+      &-item {
+        width: 283px;
+      }
+
+      &-new {
+        height: 40px;
+        top: 20px;
+        width: 40px;
+      }
+
+      &-name {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 25px 10px 25px 58px;
+      }
+    }
+
+    //Sent button
+    &__send {
+      font-size: 20px;
+      margin: 28px 0 0 0;
+      line-height: 20px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 283px;
+    }
+    //Note
+    &__note {
+      font-size: 16px;
+      margin: 28px 0 0 0;
+      padding: 18px 0;
+      text-align: left;
+      width: 283px;
+    }
+  }
+}
+
+//Desktop version
+@media (min-width: 1300px) {
+  .feedback {
+    &__headting {
+      margin-top: 76px;
+    }
+
+    &__mission {
+      padding: 0 935px 0 40px;
+      width: 325px;
+    }
+
+    //Cat and aim
+    &__сat-aim {
+      .flexRow();
+      justify-content: space-between;
+      margin: 68px auto 0 auto;
+      padding: 0 40px;
+      width: 1220px;
+    }
+
+    &__cat {
+      margin: 0;
+      padding: 0;
+      width: 570px;
+
+      &-item {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        width: auto;
+      }
+
+      &-name {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      &-iput {
+        height: 52px;
+      }
+    }
+
+    //aim
+    &__aim {
+      margin: 0;
+      padding: 0;
+      width: 570px;
+
+      &-item {
+        margin: 0;
+        padding: 0;
+        width: auto;
+      }
+    }
+
+    //owner
+    &__owner {
+      margin-top: 96px;
+
+      &-heading-wrap {
+        margin-top: -25px;
+        margin-bottom: 72px;
+        width: 1220px;
+      }
+
+      &-heading {
+        font-size: 36px;
+        line-height: 36px;
+        margin-left: -20px;
+      }
+
+      &-wrap {
+        .flexRow();
+        justify-content: space-between;
+        width: 1220px;
+      }
+
+      &-item {
+        margin-bottom: 0;
+        width: 570px;
+      }
+    }
+
+    //Comments
+    &__comments {
+      &-wrap {
+        padding: 0 40px;
+        width: 1220px;
+      }
+
+      &-heading {
+        margin: -22px 0 72px -20px;
+        padding: 0 20px;
+        width: 162px;
+      }
+
+      &-text {
+        width: 1184px;
+      }
+    }
+
+    //Additionally
+    &__add {
+      margin-bottom: 80px;
+
+      &-heading-wrap {
+        margin: -24px auto 38px auto;
+        padding: 0 40px;
+        width: 1220px;
+      }
+
+      &-wrap {
+        justify-content: flex-start;
+        width: 1220px;
+      }
+
+      &-item {
+        width: 245px;
+        margin-right: 80px;
+      }
+
+      &-item:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    //Sent button
+    &__send {
+      width: 568px;
+      margin-right: 80px;
+    }
   }
 }
