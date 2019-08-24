@@ -1,6 +1,13 @@
 //Mobile version
 .site-logo {
-  display: none;
+  .flexRow();
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-between;
+  margin: 0 auto;
+  min-height: 65px;
+  padding: 0 20px;
+  width: 280px;
 
   &:hover {
     opacity: 0.8;
@@ -10,38 +17,42 @@
     opacity: 0.6;
   }
 
-  &--visible {
-    display: block;
+  &__link {
+    .linkReset();
   }
 
-  &-mobile {
-    border-bottom: 1px solid #e6e6e6;
-    width: 100%;
+  &__img-mobile {
+    display: block;
+    height: 38px;
+    width: 192px;
+  }
 
-    &__wrap {
-      .flexRow();
-      align-items: center;
-      background-color: #ffffff;
-      justify-content: space-between;
-      min-height: 65px;
-    }
+  &__img-tablet {
+    display: none;
+    height: 58px;
+    width: 173px;
+  }
+
+  &__img-desktop {
+    display: none;
+    height: 59px;
+    width: 202px;
   }
 }
+
 //Tablet version
 @media all and (min-width: 768px) {
   .site-logo {
-    display: block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+    &__img-mobile {
+      display: none;
+    }
 
     &__img-tablet {
       display: block;
-    }
-
-    &__img-desktop {
-      display: none;
-    }
-
-    &-mobile {
-      display: none;
     }
   }
 }
@@ -49,6 +60,10 @@
 //Desktop version
 @media all and (min-width: 1300px) {
   .site-logo {
+    &__img-mobile {
+      display: none;
+    }
+
     &__img-tablet {
       display: none;
     }

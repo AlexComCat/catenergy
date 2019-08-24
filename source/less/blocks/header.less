@@ -1,6 +1,6 @@
 .header {
   background: linear-gradient(to bottom, @lime 63.75%, @white 36.25%);
-  border-top: 1px solid transparent;
+  border-top: 1px solid @lime;
   color: @white;
 
   &__heading {
@@ -46,6 +46,7 @@
 @media all and (min-width: 768px) {
   .header {
     background: none;
+    border-top: 1px solid transparent;
     position: relative;
 
     &__heading {
