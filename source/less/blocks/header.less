@@ -1,7 +1,14 @@
 .header {
-  background: linear-gradient(to bottom, @lime 63.75%, @white 36.25%);
+  background-color: @lime;
   border-top: 1px solid @lime;
   color: @white;
+  position: relative;
+
+  &__wrap {
+    background: @lime url("../../img/index-background-mobile@1x.jpg") 0 0 no-repeat;
+    padding-top: 27px;
+    padding-bottom: 165px;
+  }
 
   &__heading {
     .headingReset();
@@ -10,7 +17,6 @@
     display: block;
     font-size: 36px;
     line-height: 36px;
-    margin-top: 27px;
     width: 100%;
   }
 
@@ -26,19 +32,38 @@
     width: 100%;
   }
 
-  &__img {
+  &__img-mobile {
     display: block;
     height: 270px;
-    margin: 27px auto 0 auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 170px;
     width: 280px;
   }
 
+  &__img-tablet {
+    display: none;
+  }
+
+  &__img-desktop {
+    display: none;
+  }
+
+  &__btn-wrap {
+    .flexRow();
+    background-color: @white;
+    justify-content: center;
+    padding-top: 135px;
+    padding-bottom: 22px;
+  }
+
   &__btn {
+    display: block;
     font-size: 14px;
     line-height: 18px;
-    padding: 12px 0 13px 0;
-    position: static;
-    width: 100%;
+    padding: 12px 20px 13px 20px;
+    margin: 0 auto;
+    width: 240px;
   }
 }
 
@@ -47,13 +72,18 @@
   .header {
     background: none;
     border-top: 1px solid transparent;
-    position: relative;
+
+    &__wrap {
+      background: none;
+      padding-top: 58px;
+      padding-bottom: 0;
+    }
 
     &__heading {
       color: @lightBlack;
       font-size: 60px;
       line-height: 60px;
-      margin: 110px 0 0 90px;
+      margin-left: 90px;
       text-align: left;
       width: 427px;
     }
@@ -67,19 +97,29 @@
       width: 427px;
     }
 
-    &__img {
-      height: 609px;
-      margin: 15px auto 0 auto;
-      width: 709px;
+    &__img-mobile {
+      display: none;
+    }
+
+    &__img-tablet {
+      display: block;
+      margin-top: 18px;
+      bottom: 0;
+    }
+
+    &__btn-wrap {
+      background-color: transparent;
+      display: block;
+      margin: -578px auto 0 auto;
+      width: 618px;
+      padding: 0 30px 528px 120px;
     }
 
     &__btn {
-      bottom: 528px;
-      left: 120px;
       font-size: 20px;
       line-height: 20px;
       padding: 15px 0;
-      position: absolute;
+      margin: 0;
       width: 245px;
     }
   }
@@ -88,7 +128,13 @@
 //Desktop version
 @media all and (min-width: 1300px) {
   .header {
-    min-height: 695px;
+    background: none;
+
+    &__wrap {
+      background: transparent;
+      padding-top: 104px;
+      position: relative;
+    }
 
     &__heading {
       margin-left: 80px;
@@ -100,12 +146,21 @@
       width: 415px;
     }
 
-    &__img {
-      height: 499px;
-      left: 560px;
+    &__img-tablet {
+      display: none;
+    }
+
+    &__img-desktop {
+      display: block;
       position: absolute;
-      top: 0;
-      width: 552px;
+      left: 490px;
+      top: 20px;
+    }
+
+    &__btn-wrap {
+      margin: 0 auto;
+      padding: 0 40px 188px 40px;
+      width: 1220px;
     }
 
     &__btn {
