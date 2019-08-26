@@ -16,8 +16,22 @@
 
   &__logo {
     display: block;
+    fill: #666666;
     height: 34px;
     width: 27px;
+  }
+
+  &:hover &__logo {
+    fill: @green;
+  }
+
+  &:active &__logo {
+    fill: @green;
+    opacity: 0.3;
+  }
+
+  &:active &__text {
+    opacity: 0.3;
   }
 }
 

@@ -7,16 +7,25 @@
 
   &__link {
     display: inline-block;
-    background: green;
     margin-right: 37px;
     vertical-align: middle;
-
-    height: 22px;
-    width: 22px;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__link svg {
+    fill: #666666;
+  }
+
+  &__link:hover svg {
+    fill: @green;
+  }
+
+  &__link:active svg {
+    fill: @green;
+    opacity: 0.3;
   }
 }
 
@@ -32,6 +41,21 @@
       height: 28px;
       width: 30px;
       margin-right: 29px;
+
+      &-vk {
+        height: 16px;
+        width: 30px;
+      }
+
+      &-ig {
+        height: 23px;
+        width: 23px;
+      }
+
+      &-fb {
+        height: 28px;
+        width: 14px;
+      }
     }
 
     &:last-child {
@@ -39,7 +63,4 @@
     }
   }
 }
-//Desktop version
-@media (min-width: 1300px) {
 
-}
