@@ -32,7 +32,7 @@
 
   &__heading-1 {
     &::after {
-      background-color: #000000;
+      background: url("../../img/icon-cat-slim.svg") no-repeat center;
       content: "";
       height: 49px;
       left: -62px;
@@ -44,7 +44,7 @@
 
   &__heading-2 {
     &::after {
-      background-color: #000000;
+      background: url("../../img/icon-cat-pro.svg") no-repeat center;
       content: "";
       height: 28px;
       left: -78px;
@@ -96,18 +96,27 @@
     text-transform: uppercase;
     vertical-align: middle;
 
-    &:active {
-      color: rgba(0, 0, 0, 0.3);
-    }
-
     &::after {
-      background-color: #3e4242;
+      background: url("../../img/icon-right-arrow-long.svg") no-repeat center;
       content: "";
       height: 11px;
       left: 95px;
       position: absolute;
       top: 3px;
       width: 24px;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &:hover::after {
+      background: url("../../img/icon-right-arrow-verylong.svg") no-repeat center;
+      width: 33px;
+    }
+
+    &:active::after {
+      opacity: 0.3;
     }
   }
 }
