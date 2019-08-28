@@ -85,21 +85,24 @@
 }
 
 .calc-visual {
-  margin-top: 42px;
-  position: relative;
   .flexRow();
+  margin: 42px auto 0 auto;
+  padding: 0;
+  position: relative;
+  width: 320px;
 
   &__img {
     min-height: 318px;
+    background-size: cover;
   }
 
-  &__img-1 {
-    background-color: rgba(255, 26, 17, 0.3);
+  &__img-before {
+    background: url("../../img/before-mobile@1x.png") 0 0 no-repeat;
     width: 50%;
   }
 
-  &__img-2 {
-    background-color: rgba(35, 71, 255, 0.3);
+  &__img-after {
+    background: url("../../img/after-mobile@1x.png") 100% 0 no-repeat;
     width: 50%;
   }
 
@@ -208,9 +211,18 @@
   .calc-visual {
     border-top: 1px solid transparent;
     margin-top: 87px;
+    width: 768px;
 
     &__img {
       height: 630px;
+    }
+
+    &__img-before {
+      background: url("../../img/before-tablet@1x.png") -15% 0 no-repeat;
+    }
+
+    &__img-after {
+      background: url("../../img/after-tablet@1x.png") 110% 0 no-repeat;
     }
 
     &__range-wrap {
@@ -218,6 +230,14 @@
       bottom: 67px;
       position: absolute;
       left: 105px;
+    }
+
+    &__range-wrap:hover ~ .calc-visual__range-text {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    &__range-wrap:active .calc-visual__range-text {
+      border-bottom: 1px solid transparent;
     }
 
     &__range {
@@ -228,12 +248,35 @@
     }
 
     &__range-input {
-      border: 12px solid @white;
+      .flexRow();
+      align-items: center;
+      background-color: @white;
+      border: 1px solid @lightGrey;
       border-radius: 50%;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-      height: 6px;
-      margin: -12px 0 0 199px;
-      width: 6px;
+      justify-content: center;
+      height: 32px;
+      margin: -14px 0 0 199px;
+      width: 32px;
+    }
+
+    &__range-input::before {
+      content: "";
+      background-color: @green;
+      border-radius: 50%;
+      height: 8px;
+      width: 8px;
+    }
+
+    &__range-input:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.23);
+    }
+
+    &__range-input:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: 2px solid @green;
+      height: 30px;
+      width: 30px;
     }
 
     &__range-text {
@@ -298,6 +341,14 @@
     &__img {
       height: 650px;
       width: 325px;
+    }
+
+    &__img-before {
+      background: url("../../img/before-desktop@1x.png") 10% 0 no-repeat;
+    }
+
+    &__img-after {
+      background: url("../../img/after-desktop@1x.png") 100% 0 no-repeat;
     }
 
     &__range-wrap {
