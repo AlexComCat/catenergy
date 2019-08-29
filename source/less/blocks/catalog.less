@@ -14,6 +14,14 @@
   &__img {
     height: 144px;
     width: 140px;
+
+    &-tablet {
+      display: none;
+    }
+
+    &-desktop {
+      display: none;
+    }
   }
 
   &__desc {
@@ -34,6 +42,7 @@
   &__spec {
     .fontArial();
     border-collapse: collapse;
+    color: @grey;
     font-size: 12px;
     line-height: 16px;
     margin-top: 8px;
@@ -64,10 +73,30 @@
 
 .catalog-add {
   &__img {
-    background-color: #cccccc;
-    margin: 26px auto;
     height: 30px;
+    margin: 26px auto;
+    position: relative;
     width: 30px;
+
+    &::before {
+      background-color: #cccccc;
+      content: "";
+      height: 30px;
+      left: 49%;
+      position: absolute;
+      top: 0;
+      width: 2px;
+    }
+
+    &::after {
+      background-color: #cccccc;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 49%;
+      width: 30px;
+    }
   }
 
   &__heading {
@@ -133,13 +162,20 @@
       padding: 0;
       text-align: center;
       width: 324px;
-
     }
 
     &__img {
-      width: 195px;
       height: 208px;
       margin: -82px auto 0 auto;
+      width: 324px;
+
+      &-mobile {
+        display: none;
+      }
+
+      &-tablet {
+        display: block;
+      }
     }
 
     &__desc {
@@ -161,7 +197,7 @@
     }
 
     &__column {
-      border-bottom: 1px solid #444444;
+      border-bottom: 1px solid @lightGrey;
       padding: 5px 0;
     }
 
@@ -172,11 +208,29 @@
   }
 
   .catalog-add {
-    outline: 1px solid @grey;
+    outline: 1px solid @lightGrey;
     background: none;
 
     &__img {
+      height: 60px;
+      margin-bottom: 14px;
+      margin-top: 54px;
       background: none;
+      width: 60px;
+
+      &::before {
+        height: 60px;
+        left: 49%;
+        top: 0;
+        width: 2px;
+      }
+
+      &::after {
+        height: 2px;
+        left: 0;
+        top: 49%;
+        width: 60px;
+      }
     }
 
     &__heading {
@@ -209,16 +263,42 @@
   .catalog-item {
     margin: 142px 0 0 80px;
 
+    &__img {
+      height: 208px;
+      width: 245px;
+
+      &-mobile {
+        display: none;
+      }
+
+      &-tablet {
+        display: none;
+      }
+
+      &-desktop {
+        display: block;
+      }
+    }
+
     &__wrap {
       width: 245px;
     }
-    
+
     &__desc {
       width: 169px;
     }
 
     &__btn {
       width: 149px;
+    }
+  }
+
+  .catalog-add {
+    &__img {
+      height: 60px;
+      margin-bottom: 14px;
+      margin-top: 54px;
+      width: 60px;
     }
   }
 }
