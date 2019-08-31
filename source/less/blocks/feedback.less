@@ -60,6 +60,18 @@
       height: 43px;
     }
 
+    &-input:hover {
+      border: 1px solid rgba(205, 205, 205, 1);
+    }
+
+    &-input:focus {
+      border: 1px solid @grey;
+    }
+
+    &-input--empty {
+      border: 1px solid #ff8282;
+    }
+
     &-input::placeholder {
       color: @grey;
       text-transform: uppercase;
@@ -82,7 +94,7 @@
 
     &-new {
       background: #ffffff;
-      border: 1px solid #000000;
+      border: 1px solid @lightGrey;
       border-radius: 50%;
       cursor: pointer;
       display: block;
@@ -94,8 +106,24 @@
       z-index: 1;
     }
 
-    &-hidden:checked + &-new {
-      background: #000000;
+    &-hidden:hover +  &-new {
+      border: 1px solid #bababa;
+    }
+
+    &-hidden:disabled + &-new {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
+    &-hidden:checked + &-new::after {
+      background: @green;
+      border-radius: 50%;
+      content: "";
+      height: 12px;
+      left: 9px;
+      position: absolute;
+      top: 9px;
+      width: 12px;
     }
 
     &-name {
@@ -145,6 +173,7 @@
       font-size: 16px;
       line-height: 18px;
       margin-bottom: 14px;
+      position: relative;
     }
 
     &-item:last-child {
@@ -160,11 +189,50 @@
     }
 
     &-input {
-      border: 1px solid @lightGrey;
+      border: 1px solid rgba(205, 205, 205, 0.5);
       color: @grey;
       flex-grow: 1;
       padding-left: 16px;
       height: 43px;
+    }
+
+    &-input:hover {
+      border: 1px solid rgba(205, 205, 205, 1);
+    }
+
+    &-input:focus {
+      border: 1px solid @grey;
+    }
+
+    &-input--empty {
+      border: 1px solid #ff8282;
+    }
+
+    &-input--empty + &-icon {
+      fill: #ff8282;
+    }
+
+    &-icon {
+      fill: @darkGrey;
+      position: absolute;
+    }
+
+    &-input:focus + &-icon {
+      fill: @green;
+    }
+
+    &-email {
+      height: 13px;
+      right: 18px;
+      top: 18px;
+      width: 17px;
+    }
+
+    &-phone {
+      height: 20px;
+      right: 18px;
+      top: 14px;
+      width: 17px;
     }
 
     &-input::placeholder {
@@ -201,6 +269,18 @@
       margin: 0;
       resize: none;
       width: 252px;
+    }
+
+    &-text:hover {
+      border: 1px solid rgba(205, 205, 205, 1);
+    }
+
+    &-text:focus {
+      border: 1px solid @grey;
+    }
+
+    &-text--empty {
+      border: 1px solid #ff8282;
     }
 
     &-text::placeholder {
@@ -247,7 +327,7 @@
 
     &-new {
       background: #ffffff;
-      border: 1px solid #000000;
+      border: 1px solid @lightGrey;
       cursor: pointer;
       display: block;
       height: 30px;
@@ -258,8 +338,18 @@
       z-index: 1;
     }
 
+    &-hidden:hover + &-new {
+      border: 1px solid #bababa;
+    }
+
+    &-hidden:disabled + &-new {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
     &-hidden:checked + &-new {
-      background: #000000;
+      background: url("../../img/icon-tick.svg") no-repeat center;
+      background-size: 21px 16px;
     }
 
     &-name {
@@ -274,6 +364,10 @@
       text-transform: uppercase;
       vertical-align: middle;
       z-index: 2;
+    }
+
+    &-hidden:disabled ~ &-name {
+      opacity: 0.3;
     }
   }
 
@@ -360,10 +454,21 @@
         width: 40px;
       }
 
+      &-hidden:checked + &-new::after {
+        height: 18px;
+        left: 11px;
+        width: 18px;
+        top: 11px;
+      }
+
       &-name {
         font-size: 20px;
         padding: 15px 10px 15px 87px;
         line-height: 30px;
+      }
+
+      &-hidden:disabled ~ &-name {
+        opacity: 0.3;
       }
     }
 
