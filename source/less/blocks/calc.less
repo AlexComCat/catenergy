@@ -356,3 +356,49 @@
     }
   }
 }
+
+//For retina
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .calc-visual {
+    &__img-before {
+      background: url("../../img/before-mobile@2x.png") 0 0 no-repeat;
+      background-size: 320px auto;
+      //width: 50%;
+    }
+
+    &__img-after {
+      background: url("../../img/after-mobile@2x.png") 100% 0 no-repeat;
+      background-size: 320px auto;
+      //width: 50%;
+    }
+  }
+  //Retina tablet version
+  @media (min-width: 768px) {
+    .calc-visual {
+      &__img-before {
+        background: url("../../img/before-tablet@2x.png") -15% 0 no-repeat;
+        background-size: 690px auto;
+      }
+
+      &__img-after {
+        background: url("../../img/after-tablet@2x.png") 110% 0 no-repeat;
+        background-size: 690px auto;
+      }
+    }
+  }
+
+  //Retina tablet version
+  @media (min-width: 1300px) {
+    .calc-visual {
+      &__img-before {
+        background: url("../../img/before-desktop@2x.png") 10% 0 no-repeat;
+        background-size: 690px auto;
+      }
+
+      &__img-after {
+        background: url("../../img/after-desktop@2x.png") 100% 0 no-repeat;
+        background-size: 690px auto;
+      }
+    }
+  }
+}

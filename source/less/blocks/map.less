@@ -1,6 +1,6 @@
 .map {
   .linkReset();
-  background: url("../../img/map-mobile@1x.png") no-repeat center;
+  background: url("../../img/bg-map-mobile@1x.png") no-repeat center;
   background-size: cover;
   display: block;
   height: 362px;
@@ -9,7 +9,7 @@
 //Tablet version
 @media (min-width: 768px) {
   .map {
-    background: url("../../img/map-tablet@1x.png") no-repeat center;
+    background: url("../../img/bg-map-tablet@1x.png") no-repeat center;
     background-size: cover;
     height: 395px;
   }
@@ -18,8 +18,33 @@
 //Desktop version
 @media (min-width: 1300px) {
   .map {
-    background: url("../../img/map-desktop@1x.png") no-repeat center;
+    background: url("../../img/bg-map-desktop@1x.png") no-repeat center;
     background-size: cover;
     height: 400px;
+  }
+}
+
+//For retina
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .map {
+    .linkReset();
+    background: url("../../img/bg-map-mobile@2x.png") no-repeat center;
+    background-size: 100% auto;
+  }
+
+  //Tablet version
+  @media (min-width: 768px) {
+    .map {
+      background: url("../../img/bg-map-tablet@2x.png") no-repeat center;
+      background-size: 100% auto;
+    }
+  }
+
+  //Desktop version
+  @media (min-width: 1300px) {
+    .map {
+      background: url("../../img/bg-map-desktop@2x.png") no-repeat center;
+      background-size: 103% auto;
+    }
   }
 }
