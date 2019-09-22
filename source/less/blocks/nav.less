@@ -1,6 +1,11 @@
 //Mobile version
 .nav {
+  display: block;
   width: 100%;
+
+  &--hidden {
+    display: none;
+  }
 
   &__list {
     .unListReset();
@@ -33,7 +38,6 @@
     background-color: transparent;
     height: 2px;
     position: relative;
-    transition: all 1s linear;
     width: 24px;
 
     &::before,
@@ -54,26 +58,32 @@
       transform: rotate(-45deg);
     }
 
-    &-hidden {
+    &--hidden {
       background-color: @darkGrey;
     }
 
-    &-hidden::before,
-    &-hidden::after {
+    &--hidden::before,
+    &--hidden::after {
       transform: rotate(0deg);
       width: 24px;
     }
 
-    &-hidden::before {
+    &--hidden::before {
       top: -8px;
     }
 
-    &-hidden::after {
+    &--hidden::after {
       top: 8px;
+    }
+
+    &:active {
+      border: 0;
+      outline: none;
     }
   }
 }
 
+//Tablet version
 @media all and (min-width: 768px) {
   .nav {
     display: block;
@@ -118,7 +128,7 @@
   }
 }
 
-////Desktop version
+//Desktop version
 @media (min-width: 1300px) {
   .nav {
     &__link {

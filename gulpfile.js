@@ -20,10 +20,10 @@ gulp.task("style", function(done) {
         .pipe(postcss([
             autoprefixer()
         ]))
-        .pipe(gulp.dest("build/css"))
+        .pipe(gulp.dest("source/css"))
         .pipe(minify())
         .pipe(rename('style.min.css'))
-        .pipe(gulp.dest("build/css"))
+        .pipe(gulp.dest("source/css"))
         .pipe(browserSync.stream());
 
     done();
@@ -57,6 +57,8 @@ gulp.task("serve", function (done) {
     });
     gulp.watch("source/less/**/*.less", gulp.series('style', 'clean', 'copy'));
     gulp.watch("source/*.html", gulp.series('style', 'clean', 'copy'));
+    gulp.watch("source/js/**/*.js", gulp.series('style', 'clean', 'copy'));
+
     gulp.watch("source/*.html").on("change", () => {
         browserSync.reload();
         done();
