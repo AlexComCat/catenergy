@@ -1,17 +1,18 @@
 "use strict";
 
-var less = require('gulp-less'),
-    gulp = require('gulp'),
+var less = require("gulp-less"),
+    gulp = require("gulp"),
     plumber = require("gulp-plumber"),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
-    minify = require('gulp-csso'),
-    rename = require('gulp-rename'),
-    del = require('del'),
-    uglify = require('gulp-uglify'),
+    minify = require("gulp-csso"),
+    rename = require("gulp-rename"),
+    htmlmin = require("gulp-htmlmin"),
+    del = require("del"),
+    uglify = require("gulp-uglify"),
     imagemin = require("gulp-imagemin"),
     webp = require("gulp-webp"),
-    browserSync = require('browser-sync').create();
+    browserSync = require("browser-sync").create();
 
 gulp.task("style", function(done) {
     gulp.src("source/less/style.less")
@@ -22,17 +23,24 @@ gulp.task("style", function(done) {
         ]))
         .pipe(gulp.dest("source/css"))
         .pipe(minify())
-        .pipe(rename('style.min.css'))
+        .pipe(rename("style.min.css"))
         .pipe(gulp.dest("source/css"))
         .pipe(browserSync.stream());
 
     done();
 });
 
+gulp.task("htmlminify", () => {
+    return gulp.src("source/*.html")
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest("build"));
+});
+
 gulp.task("compress", function () {
     return gulp.src("source/js/*.js")
         .pipe(uglify())
-        .pipe(gulp.dest("build/js"));
+        .pipe(gulp.dest("build/js"))
+        .pipe(browserSync.stream());
 });
 
 gulp.task("images", function () {
@@ -55,9 +63,9 @@ gulp.task("serve", function (done) {
     browserSync.init({
         server: "build/"
     });
-    gulp.watch("source/less/**/*.less", gulp.series('style', 'clean', 'copy'));
-    gulp.watch("source/*.html", gulp.series('style', 'clean', 'copy'));
-    gulp.watch("source/js/**/*.js", gulp.series('style', 'clean', 'copy'));
+    gulp.watch("source/less/**/*.less", gulp.series("style", "clean", "copy"));
+    gulp.watch("source/*.html", gulp.series("htmlminify"));
+    gulp.watch("source/js/**/*.js", gulp.series("compress"));
 
     gulp.watch("source/*.html").on("change", () => {
         browserSync.reload();
@@ -77,7 +85,6 @@ gulp.task("copy", function () {
         "source/img/**",
         "source/js/**",
         "source/css/**",
-        "source/*.html"
     ], {
         base: "source"
     })
@@ -85,8 +92,9 @@ gulp.task("copy", function () {
 });
 
 // Run build
-gulp.task('build', gulp.series('style',
-                                'clean',
-                                'copy',
-                                'compress',
-                                'serve'));
+gulp.task("build", gulp.series("style",
+                                "clean",
+                                "copy",
+                                "compress",
+                                "htmlminify",
+                                "serve"));
