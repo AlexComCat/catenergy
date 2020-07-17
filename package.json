@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "handlebars": "^4.1.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lodash.merge": "^4.6.2",
     "natives": "^1.1.6",
     "normalize.less": "^1.0.0",
